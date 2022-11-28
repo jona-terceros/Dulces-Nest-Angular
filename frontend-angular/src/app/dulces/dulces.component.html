@@ -1,0 +1,25 @@
+<h2>Dulce</h2>
+<div>
+  <form class="form">
+  <label for="new-dulce">Nombre</label>
+  <input id="new-dulce" #dulceNombre>
+  <label for="new-dulce">Marca</label>
+  <input id="new-dulce" #dulceMarca>
+  <label for="new-dulce">Sabor</label>
+  <input id="new-dulce" #dulceSabor>
+  <label for="new-dulce">Cantidad</label>
+  <input id="new-dulce" #dulceCantidad>
+  </form>
+  <button type="button" class="add-button" (click)="add(dulceNombre.value,dulceMarca.value,dulceSabor.value,dulceCantidad.value); dulceNombre.value='';dulceMarca.value='';dulceSabor.value='';dulceCantidad.value=''">
+    Agregar Dulce
+  </button>
+</div>
+<ul class="dulces">
+  <li *ngFor="let dulce of dulces">
+    <a routerLink="/detail/{{dulce.id}}">
+      {{dulce.nombre}}
+    </a>
+    <button type="button" class="delete" title="delete dulce"
+            (click)="delete(dulce)">Eliminar</button>
+  </li>
+</ul>

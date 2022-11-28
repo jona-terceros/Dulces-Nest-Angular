@@ -1,0 +1,24 @@
+<div *ngIf="dulce">
+  <h2>{{dulce.nombre | uppercase}} Detalles</h2>
+  <form class="form">
+  <div><span>Id: </span>{{dulce.id}}</div>
+    <div><span>Nombre: </span>{{dulce.nombre}}</div>
+  <div><span>Marca: </span>{{dulce.marca}}</div>
+  <div><span>Sabor: </span>{{dulce.sabor}}</div>
+  <div><span>Cantidad: </span>{{dulce.cantidad}}</div>
+  </form>
+<div class="lab">
+    <label for="dulce-nombre">Nombre: </label>
+    <input id="dulce-nombre" [(ngModel)]="dulce.nombre" placeholder="Dulce"/>
+    <label for="dulce-nombre">Marca: </label>
+    <input id="dulce-marca" [(ngModel)]="dulce.marca " placeholder="Dulce"/>
+    <label for="dulce-nombre">Sabor: </label>
+    <input id="dulce-sabor" [(ngModel)]="dulce.sabor" placeholder="Dulce"/>
+    <label for="dulce-nombre">Cantidad: </label>
+    <input id="dulce-cantidad" [(ngModel)]="dulce.cantidad" placeholder="Dulce"/>
+</div>
+  <form class="form2">
+  <button type="button" (click)="goBack()">Volver</button>
+  <button type="button" (click)="save()">save</button>
+  </form>
+</div>
